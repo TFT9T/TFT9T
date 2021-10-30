@@ -6,15 +6,11 @@ local database = dofile("./lib/redis.lua").connect("127.0.0.1", 6379)
 print([[
 
 
-      ________         __         ______   __        ________        __    __ 
-      /        |       /  |       /      \ /  |      /        |      /  |  /  |
-      $$$$$$$$/_______ $$ |____  /$$$$$$  |$$ |   __ $$$$$$$$/       $$ |  $$ |
-         $$ | /       |$$      \ $$ |__$$ |$$ |  /  |$$ |__          $$  \/$$/ 
-         $$ |/$$$$$$$/ $$$$$$$  |$$    $$ |$$ |_/$$/ $$    |          $$  $$<  
-         $$ |$$      \ $$ |  $$ |$$$$$$$$ |$$   $$<  $$$$$/            $$$$  \ 
-         $$ | $$$$$$  |$$ |  $$ |$$ |  $$ |$$$$$$  \ $$ |_____        $$ /$$  |
-         $$ |/     $$/ $$ |  $$ |$$ |  $$ |$$ | $$  |$$       |      $$ |  $$ |
-         $$/ $$$$$$$/  $$/   $$/ $$/   $$/ $$/   $$/ $$$$$$$$/       $$/   $$/ 
+       ____  _    _    ____ _ 
+|  _ \| ____|  / \  / _| __|
+| |_) |  _|   / _ \| |   |  _|  
+|  /| |_ / _ \ |_| |___ 
+|_|   |_____/_/   \_\____|_____| 
       
 ]])
 Server_TFT9T = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
@@ -42,14 +38,14 @@ io.write('\n\27[1;31m»» The Token Is Saved\n\27[0;39;49m')
 database:set(Server_TFT9T.."Token_TFT9T",token)
 end 
 else
-io.write('\n\27[1;31mThe Tokem was not Saved\n\27[0;39;49m')
+io.write('\n\27[1;31mThe لم يتم حفظ التوكن\n\27[0;39;49m')
 end 
 os.execute('lua start.lua')
 end
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
 if not database:get(Server_TFT9T.."UserName_TFT9T") then
-print("\27[1;34m\n»» Send Your UserName Sudo : \27[m")
+print("\27[1;34m\n»» تم حفظ التوكن ابشرك، يلا هات يوزرك يالحبيب : \27[m")
 local UserName = io.read():gsub('@','')
 if UserName ~= '' then
 local Get_Info = http.request("http://TFT9T.ml/info/?user="..UserName)
@@ -72,7 +68,7 @@ database:set(Server_TFT9T.."Id_TFT9T",Json.Info.Id)
 end
 end
 else
-io.write('\n\27[1;31mThe UserName was not Saved\n\27[0;39;49m')
+io.write('\n\27[1;31mThe لم يتم حفظ اليوزر\n\27[0;39;49m')
 end 
 os.execute('lua start.lua')
 end
