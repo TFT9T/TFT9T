@@ -5,21 +5,13 @@ JSON = dofile("./lib/JSON.lua")
 local database = dofile("./lib/redis.lua").connect("127.0.0.1", 6379)
 print([[
 
-
-                        
+        
        ____  _    _    ____ _ 
 |  _ \| ____|  / \  / _| __|
 | |_) |  _|   / _ \| |   |  _|  
 |  /| |_ / _ \ |_| |___ 
 |_|   |_____/_/   \_\____|_____|    
 
-                    
-           
-          
-         
-         
-         
-      
 ]])
 Server_TFT9T = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
 local AutoFiles_TFT9T = function() 
