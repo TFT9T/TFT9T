@@ -95,7 +95,7 @@ cd $HOME/TshAkEx
 while(true) do
 rm -fr ../.telegram-cli
 screen -S TshAkE -X kill
-screen -S TshAkE ./Tshake
+screen -S TshAkE ./TFT9T
 done
 ]])
 RunTs:close()
