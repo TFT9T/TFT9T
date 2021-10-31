@@ -5,15 +5,11 @@ JSON = dofile("./lib/JSON.lua")
 serpent = dofile("./lib/serpent.lua")
 local database = dofile("./lib/redis.lua").connect("127.0.0.1", 6379)
 print([[
-      ________         __         ______   __        ________        __    __ 
-      /        |       /  |       /      \ /  |      /        |      /  |  /  |
-      $$$$$$$$/_______ $$ |____  /$$$$$$  |$$ |   __ $$$$$$$$/       $$ |  $$ |
-         $$ | /       |$$      \ $$ |__$$ |$$ |  /  |$$ |__          $$  \/$$/ 
-         $$ |/$$$$$$$/ $$$$$$$  |$$    $$ |$$ |_/$$/ $$    |          $$  $$<  
-         $$ |$$      \ $$ |  $$ |$$$$$$$$ |$$   $$<  $$$$$/            $$$$  \ 
-         $$ | $$$$$$  |$$ |  $$ |$$ |  $$ |$$$$$$  \ $$ |_____        $$ /$$  |
-         $$ |/     $$/ $$ |  $$ |$$ |  $$ |$$ | $$  |$$       |      $$ |  $$ |
-         $$/ $$$$$$$/  $$/   $$/ $$/   $$/ $$/   $$/ $$$$$$$$/       $$/   $$/ 
+       ____  _    _    ____ _ 
+|  _ \| ____|  / \  / _| __|
+| |_) |  _|   / _ \| |   |  _|  
+|  /| |_ / _ \ |_| |___ 
+|_|   |_____/_/   \_\____|_____| 
       
 ]])
 Server_Tshake = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
@@ -95,7 +91,7 @@ cd $HOME/TshAkEx
 while(true) do
 rm -fr ../.telegram-cli
 screen -S TshAkE -X kill
-screen -S TshAkE ./TFT9T
+screen -S TshAkE ./TFT9T.lua
 done
 ]])
 RunTs:close()
